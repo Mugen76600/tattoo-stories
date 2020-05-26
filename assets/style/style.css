@@ -1,0 +1,103 @@
+/* Bouton de retour à l'index sur page 404 */
+#backHome {
+    height: 5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+}
+
+/* Marge entre différents éléments d'une page de détails story */
+.detailsStoryMargin {
+    margin-bottom: 4.5rem;
+}
+
+/* Taille des image supplémentaires en fin de story */
+.img-thumbnail {
+    width: 15rem;
+}
+
+/* Positionnement icône pour repérer les stories du user connecté et icône suppression */
+.ownerCrown,
+.deleteStoryIcon {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.5rem;
+}
+
+footer {
+    background-image: linear-gradient(to bottom, #ffffff, #e02b3b, #d21617, #d21617, #d21617, #d21617);
+}
+
+/* Icône dans la navbar lorsque user connecté */
+.fas.fa-heart {
+    color: red;
+}
+
+#cancelPic1,
+#cancelPic2,
+#cancelPic3,
+.storyEditionBtn,
+.userEditionBtn,
+.img-thumbnail,
+.storiesCards,
+.toggleAddComment,
+.loginButton,
+.deleteUserBtn,
+.disconnectUserBtn,
+.commentEditionBtn,
+.deleteCommentBtn {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Titre principal des pages */
+.display-1 {
+    font-size: 2.50rem;
+    font-family: 'Kranky', cursive;
+}
+
+#titleOnRedirectionPage,
+#titleOn404Page {
+    font-family: 'Kranky', cursive;
+}
+
+/* Taille max des aperçus lors de la création de story */
+#imgPreview1,
+#imgPreview2,
+#imgPreview3 {
+    max-width: 200px;
+}
+
+/* En vue mobile */
+@media (max-width: 576px) {
+    .display-1 {
+        font-size: 1.75rem;
+    }
+
+    /* Utilisé pour les messages d'erreurs d'accès aux pages. Ex.: utilisateur non connecté tape l'url d'update d'une story */
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    #backHome {
+        border-radius: 50%;
+        float: right;
+        height: 3.25rem;
+        width: 3.25rem;
+        font-size: 1.35rem;
+    }
+}
+
+/* Ajustement de la taille des boutons de la navbar lorsque cette dernière collapse */
+@media (max-width: 990px) {
+    .nav-item {
+        width: fit-content;
+    }
+
+    .nav-link>span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

@@ -1,0 +1,4 @@
+ErrorDocument 404 /Views/page404.php
+
+#Empêche l'accès à la structure du site
+Options -Indexes
