@@ -10,5 +10,9 @@ $(function () {
         $(this).removeClass("shadow");
     });
     // Activation des tooltips
-    $('[data-toggle="tooltip"]').tooltip();
+    $("[data-toggle='tooltip']").tooltip();
+    // Cacher les tooltips lors du déclenchement de modal en vue mobile
+    $("#updateUserModal, #deconnectUserModal, #deleteUserModal").on("focus", function () {
+        $("[data-toggle='tooltip']").tooltip('hide');
+    });
 })
