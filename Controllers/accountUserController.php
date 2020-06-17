@@ -8,7 +8,7 @@ require '../Models/User.php';
 if (isset($_POST['disconnect'])) {
     if (isset($_SESSION['userLogin']) && $_SESSION['userLogin'] != "") {
         session_destroy();
-        header('Location: /index.php');
+        header('Location: /');
         die;
     } else if (isset($_COOKIE['userLogin'])) {
         setcookie('userLogin', "", time() - 1000, '/');
@@ -16,7 +16,7 @@ if (isset($_POST['disconnect'])) {
         setcookie('userLastname', "", time() - 1000, '/');
         setcookie('userFirstname', "", time() - 1000, '/');
         setcookie('userId', "", time() - 1000, '/');
-        header('Location: /index.php');
+        header('Location: /');
         die;
     }
 }
