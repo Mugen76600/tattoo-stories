@@ -9,4 +9,6 @@ $(function () {
         // Souris hors de l'élément
         $(this).removeClass("shadow");
     });
+    // Activation des tooltips
+    $('[data-toggle="tooltip"]').tooltip();
 })

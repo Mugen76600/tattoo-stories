@@ -70,16 +70,22 @@ require 'bodyTop.php';
                         <div class="text-danger h4">
                             Mes <span class="text-body">infos</span>
                         </div>
-                        <!-- Boutons d'update et de déconnexion -->
+                        <!-- Boutons d'update, de déconnexion et de suppression -->
                         <div>
                             <a class="userEditionBtn" data-toggle="modal" data-target="#updateUserModal">
-                                <i class="fas fa-user-edit text-body"></i>
+                                <span data-toggle="tooltip" data-placement="top" title="Modifier infos">
+                                    <i class="fas fa-user-edit text-body"></i>
+                                </span>
                             </a>
                             <a class="disconnectUserBtn" data-toggle="modal" data-target="#deconnectUserModal">
-                                <i class="fas fa-plug text-body mx-2"></i>
+                                <span data-toggle="tooltip" data-placement="top" title="Se déconnecter">
+                                    <i class="fas fa-plug text-body mx-2"></i>
+                                </span>
                             </a>
                             <a class="deleteUserBtn" data-toggle="modal" data-target="#deleteUserModal">
-                                <i class="far fa-trash-alt text-danger"></i>
+                                <span data-toggle="tooltip" data-placement="top" title="Supprimer compte">
+                                    <i class="far fa-trash-alt text-danger"></i>
+                                </span>
                             </a>
                         </div>
                         <!-- Affichage des infos user -->
