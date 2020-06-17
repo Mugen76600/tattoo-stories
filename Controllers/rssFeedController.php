@@ -13,11 +13,11 @@ function getThumbnail()
     do {
         // Champs de recherche de la fonction
         $picId = mt_rand(1, 1064);
-        $url = "https://i.picsum.photos/id/" . $picId . "/1920/1080.jpg";
+        $url = "https://picsum.photos/id/" . $picId . "/1920/1080";
         // Récupération du code renvoyé par l'url
         $headers = get_headers($url);
         // La recherche d'id se poursuit tant que la page retourne un code erreur 404
     } while ($headers && strpos($headers[0], '404'));
     // Si la page existe, la fonction retourne l'url de l'image
-    return "https://i.picsum.photos/id/" . $picId . "/1920/1080.jpg";
+    return $url;
 }

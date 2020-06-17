@@ -1,6 +1,6 @@
 <div style="height: 80px;">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand" href="/index.php">
+        <a class="navbar-brand" href="/">
             <img src="/assets/img/logo.png" width="50" height="50" class="d-inline-block align-middle" alt="Logo" />
             <span class="text-danger">TATTOO</span> Stories
         </a>
@@ -21,7 +21,7 @@
             <?php } ?>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] == "/index.php" || $_SERVER['REQUEST_URI'] == "/" ? "shadow active border border-0 rounded bg-danger text-white" : ""; ?>" href="/index.php"><span>Accueil</span></a>
+                    <a class="nav-link <?= $_SERVER['REQUEST_URI'] == "/" ? "shadow active border border-0 rounded bg-danger text-white" : ""; ?>" href="/"><span>Accueil</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?= strpos($_SERVER['REQUEST_URI'], "listStories") !== false || strpos($_SERVER['REQUEST_URI'], "detailsStory") !== false || strpos($_SERVER['REQUEST_URI'], "updateStory") !== false ? "shadow active border border-0 rounded bg-danger text-white" : ""; ?>" href="/Views/listStories.php"><span>Stories</span></a>
