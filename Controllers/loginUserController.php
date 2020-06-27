@@ -36,8 +36,8 @@ if (isset($_POST['connectUser'])) {
                 $_SESSION['userFirstname'] = $user->getFirstname();
                 $_SESSION['userId'] = $user->getId();
                 // Condition de redirection car la page d'inscription n'est pas accessible une fois loggé
-                if ($_SERVER['REQUEST_URI'] == "/Views/addUser.php") {
-                    header('Location: /index.php');
+                if ($_SERVER['REQUEST_URI'] == "/Views/addUser" || $_SERVER['REQUEST_URI'] == "/Views/addUser.php") {
+                    header('Location: /');
                     die;
                 } else {
                     header('Location: ' . $_SERVER['REQUEST_URI']);
