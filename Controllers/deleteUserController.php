@@ -13,7 +13,7 @@ if (isset($_POST['deleteUser'])) {
         // L'utilisateur est supprimé de la base, ses infos de login sont supprimées puis il est redirigé vers l'accueil
         $user->deleteUser();
         session_destroy();
-        header('Location: /index.php');
+        header('Location: /');
         die;
         // Même procédure qu'au dessus mais pour un utilisateur loggé via des cookies
     } else if (isset($_COOKIE['userLogin'])) {
@@ -28,7 +28,7 @@ if (isset($_POST['deleteUser'])) {
         setcookie('userLastname', "", time() - 1000, '/');
         setcookie('userFirstname', "", time() - 1000, '/');
         setcookie('userId', "", time() - 1000, '/');
-        header('Location: /index.php');
+        header('Location: /');
         die;
     }
 }
