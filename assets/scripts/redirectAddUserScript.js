@@ -3,6 +3,6 @@ $(function () {
     document.title += " - Redirection";
     // Effectue une redirection sur l'index après 3 secondes
     setTimeout(function () {
-        window.location = "/index.php";
+        window.location = "/";
     }, 3000);
 })
