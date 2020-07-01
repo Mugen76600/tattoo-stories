@@ -4,6 +4,10 @@ if (isset($_POST['agreeCookies'])) {
     // Vérifie si un paramètre d'id existe dans l'url
     $parameterIdExists = $_GET['id'] ? '?id=' . $_GET['id'] : '';
     setcookie('acceptedCookies', true, time() + 60 * 60 * 24 * 30, '/');
-    header('Location: ' . $_SERVER['PHP_SELF'] . $parameterIdExists);
+    if ($_SERVER['PHP_SELF'] == '/index.php') {
+        header('Location: /');
+    } else {
+        header('Location: ' . $_SERVER['PHP_SELF'] . $parameterIdExists);
+    }
     die;
 }

@@ -76,7 +76,8 @@ require 'bodyTop.php';
                                 <div class="font-weight-bold text-danger h5"><?= $value[1] != "" ? $value[1] : "" ?></div>
                                 <div>
                                     Publié le <?= $value[0] ?> par <span class="font-weight-bold text-danger"><?= $value[3] ?></span>
-                                    <?php if (isset($currentUser) && $currentUser == $value[5] && (time() - strtotime($value[4])) < (60 * 100)) { ?>
+                                    <!-- Permet à l'utilisateur de modifier ou supprimer son commentaire durant 10 minutes -->
+                                    <?php if (isset($currentUser) && $currentUser == $value[5] && (time() - strtotime($value[4])) < (60 * 10)) { ?>
                                         <span class="mx-2">
                                             <a class="commentEditionBtn" data-toggle="modal" data-target="#updateCommentModal<?= $value[6] ?>">
                                                 <i class="far fa-edit text-muted"></i>

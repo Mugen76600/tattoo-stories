@@ -6,7 +6,8 @@ $(function () {
         $("#commentForm").collapse("show");
     }
     // Maintient la modal de modification de commentaire ouverte en cas de formulaire mal rempli
-    if ($("#updateCommentModal").hasClass("show")) {
-        $("#updateCommentModal").modal("show");
-    }
+    // TODO: récupérer l'id du commentaire pour cibler la bonne modal
+    // if ($("#updateCommentModal" + <comment_id>).hasClass("show")) {
+    //     $("#updateCommentModal" + <comment_id>).modal("show");
+    // }
 })
